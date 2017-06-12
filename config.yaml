@@ -1,0 +1,10 @@
+config:
+  use: 'default'
+  api_version: 2
+  project_root_dir: 'dev-env'
+  project_name: 'my_project'
+  db_name: 'my_project'
+  db_user: 'my_project'
+  ssh_port: 12222
+  mysql_port: 13306
+
