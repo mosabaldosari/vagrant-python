@@ -25,5 +25,5 @@ Vagrant.configure(vagrant_config['api_version']) do |config|
 	config.vm.synced_folder ".", "/home/vagrant/" + vagrant_config['project_root_dir'], create: true, id: "project"
 
 	# Enable provisioning with a shell script.
-	config.vm.provision :shell, :path => "install/install.sh", :args => [vagrant_config['project_name'],vagrant_config['db_name'],vagrant_config['db_user'],vagrant_config['project_root_dir']
+	config.vm.provision :shell, :path => "install/install.sh", :args => [vagrant_config['project_name'],vagrant_config['db_name'],vagrant_config['db_user'],vagrant_config['project_root_dir']]
 end
