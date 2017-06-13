@@ -34,7 +34,7 @@ if ! command -v mysql; then
     echo -e "\n--- Installing  MySQL specific packages and settings ---\n"
     debconf-set-selections <<< "mysql-server mysql-server/root_password password $DB_PASSWD"
     debconf-set-selections <<< "mysql-server mysql-server/root_password_again password $DB_PASSWD"
-    apt-get -y install mysql-server
+    apt-get -y install mysql-server libmysqlclient-dev
 
     echo -e "\n--- Setting up our MySQL user and db ---\n"
 
@@ -58,4 +58,4 @@ cp -p $PROJECT_ROOT/install/bashrc /home/vagrant/.bashrc
 su - vagrant -c "/usr/local/bin/virtualenv $VIRTUALENV_DIR --python=/usr/bin/python && \
     echo $PROJECT_DIR > $VIRTUALENV_DIR/.project"
 
-echo "workon $VIRTUALENV_NAME" >> /home/vagrant/.bashrc
+echo -e "workon $VIRTUALENV_NAME" >> /home/vagrant/.bashrc
