@@ -58,4 +58,4 @@ cp -p $PROJECT_ROOT/install/bashrc /home/vagrant/.bashrc
 su - vagrant -c "/usr/local/bin/virtualenv $VIRTUALENV_DIR --python=/usr/bin/python && \
     echo $PROJECT_DIR > $VIRTUALENV_DIR/.project"
 
-echo -e "workon $VIRTUALENV_NAME" >> /home/vagrant/.bashrc
+echo -e "\nworkon $VIRTUALENV_NAME" >> /home/vagrant/.bashrc
